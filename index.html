@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distribuidora Médica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Suministros Médicos de Alta Calidad</h1>
+        <nav>
+            <a href="#catalogo">Ver Catálogo</a> | 
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="multimedia">
+            <h2>Demostración de Equipo</h2>
+            <!-- Muestra de Imagen -->
+            <img src="https://via.placeholder.com/400x200?text=Equipo+Quirurgico" alt="Equipo Quirúrgico">
+            <br>
+            <!-- Muestra de Video -->
+            <video width="400" controls muted>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </section>
+
+        <section id="catalogo">
+            <h2>Catálogo Cargado con Fetch</h2>
+            <div id="lista-productos">Cargando productos...</div>
+            <button id="cargar-btn">Recargar Catálogo</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
