@@ -1,9 +1,8 @@
-// Uso de Fetch API para simular la carga de datos
+// Función para consumir datos externos (Fetch API)
 function cargarProductos() {
     const contenedor = document.getElementById('lista-productos');
+    contenedor.innerHTML = 'Cargando datos...';
     
-    // Aquí podrías poner la URL de tu backend real. 
-    // Usamos JSONPlaceholder como prueba de concepto.
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => {
             if (!response.ok) throw new Error('Error en la red');
@@ -11,20 +10,26 @@ function cargarProductos() {
         })
         .then(data => {
             contenedor.innerHTML = '';
-            // Simulamos que los "usuarios" son "productos médicos"
             data.slice(0, 3).forEach(item => {
                 const div = document.createElement('div');
-                div.innerHTML = `<strong>Producto:</strong> ${item.name} <br> <strong>Distribuidor:</strong> ${item.company.name}`;
-                div.style.marginBottom = '10px';
+                // Estilizamos un poco los resultados del fetch para que combinen
+                div.style.background = '#fff';
+                div.style.margin = '10px auto';
+                div.style.padding = '10px';
+                div.style.maxWidth = '400px';
+                div.style.borderRadius = '5px';
+                div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
+                
+                div.innerHTML = `<strong>Producto ID-${item.id}:</strong> ${item.name} <br> <em>Distribuidor: ${item.company.name}</em>`;
                 contenedor.appendChild(div);
             });
         })
         .catch(error => {
-            contenedor.innerHTML = 'Error al cargar el catálogo.';
-            console.error('Hubo un problema con la petición Fetch:', error);
+            contenedor.innerHTML = '<p style="color:red;">Error al cargar el catálogo.</p>';
+            console.error('Problema con Fetch:', error);
         });
 }
 
-// Cargar al iniciar y al hacer clic en el botón
+// Iniciar eventos cuando cargue la página
 document.addEventListener('DOMContentLoaded', cargarProductos);
 document.getElementById('cargar-btn').addEventListener('click', cargarProductos);
