@@ -21,7 +21,7 @@ function cargarProductos() {
         div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
         
         // Aquí es donde se define exactamente qué texto aparece en pantalla
-        div.innerHTML = `<strong>Insumo #${item.id}:</strong> ${item.nombre} <br> <em>Marca: ${item.marca}</em>`;
+        div.innerHTML = `<strong>No. #${item.id}:</strong> ${item.nombre} <br> <em>Marca: ${item.marca}</em>`;
         
         contenedor.appendChild(div);
     });
