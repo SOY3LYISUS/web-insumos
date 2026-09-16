@@ -5,9 +5,9 @@ function cargarProductos() {
 
     // AQUÍ ESTÁ TU NUEVA LISTA. Puedes editar el texto entre comillas o agregar más.
     const misInsumos = [
-        { id: 1, nombre: "Pinza Quirúrgica Kelly Recta", marca: "MedTools" },
-        { id: 2, nombre: "Bisturí de Acero Inoxidable No. 4", marca: "SurgiPro" },
-        { id: 3, nombre: "Paquete de Gasas Estériles 10x10", marca: "CuracionesMX" }
+        { id: 1, nombre: "Arthroscopic Shaver Blade 5.0 mm x 125 mm", marca: "STRYKER" },
+        { id: 2, nombre: "Arthroscopic Shaver Blade 4.0 mm x 125 mm", marca: "STRYKER" },
+        { id: 3, nombre: "Inside out Meniscal Repair System UHMWPE", marca: "PIEX" }
     ];
 
     // Este código dibuja los recuadros en la pantalla
