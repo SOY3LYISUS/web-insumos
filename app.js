@@ -20,7 +20,7 @@ function cargarProductos() {
                 div.style.borderRadius = '5px';
                 div.style.boxShadow = '0 2px 4px rgba(0,0,0,0.1)';
                 
-                div.innerHTML = `<strong>Producto ID-${item.id}:</strong> ${item.name} <br> <em>Distribuidor: ${item.company.name}</em>`;
+                div.innerHTML = `<strong>Producto ID-${item.id}:</strong> ${item.name} <br> <em>Distribuidor: ${Shaver.Mc.Co.Marco}</em>`;
                 contenedor.appendChild(div);
             });
         })
